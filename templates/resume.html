@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Oscar Tetteh</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="nav-logo" href="{{ url_for('index') }}">OT.</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('index') }}#about">About</a></li>
+    <li><a href="{{ url_for('index') }}#skills">Skills</a></li>
+    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+    <li><a href="{{ url_for('resume') }}" class="active">Resume</a></li>
+    <li><a href="{{ url_for('index') }}#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="resume-page">
+  <div class="container">
+
+    <div class="resume-header-bar">
+      <div>
+        <span class="section-tag">Curriculum Vitae</span>
+        <h1 class="section-title" style="text-align:left;">Oscar Tetteh</h1>
+        <p style="color:var(--text-dim);margin-top:.25rem;">Research Analyst &amp; Data Analyst</p>
+      </div>
+      <a href="{{ url_for('download_resume') }}" class="btn btn-primary">
+        ⬇ Download PDF Resume
+      </a>
+    </div>
+
+    <!-- Summary -->
+    <div class="resume-block">
+      <div class="resume-block-title">🧑‍💼 Professional Summary</div>
+      <p style="color:var(--text-dim);font-size:.95rem;line-height:1.8;">
+        Detail-oriented Research and Data Analyst with 3+ years of experience transforming
+        complex datasets into actionable insights. Proficient in Python, SQL, R, Power BI,
+        and Tableau. Proven track record of supporting evidence-based decision-making across
+        market research, policy analysis, and business intelligence contexts. Strong communicator
+        able to present technical findings to non-technical stakeholders.
+      </p>
+    </div>
+
+    <!-- Experience -->
+    <div class="resume-block">
+      <div class="resume-block-title">💼 Work Experience</div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Research Analyst</div>
+            <div class="resume-entry-org">Market Insights Group &mdash; Accra, Ghana</div>
+          </div>
+          <span class="resume-entry-date">Jan 2024 – Present</span>
+        </div>
+        <ul>
+          <li>Designed and managed end-to-end quantitative surveys (n&gt;500) on consumer behavior and market trends.</li>
+          <li>Built automated weekly dashboards in Power BI that reduced manual reporting time by 60%.</li>
+          <li>Applied regression and segmentation models in Python to identify high-value customer cohorts.</li>
+          <li>Collaborated with strategy teams to translate findings into quarterly business recommendations.</li>
+          <li>Led a 3-person analyst team during a national brand perception study covering 6 regions.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Data Analyst Intern</div>
+            <div class="resume-entry-org">Ghana Statistical Service &mdash; Accra, Ghana</div>
+          </div>
+          <span class="resume-entry-date">Jun 2022 – Dec 2023</span>
+        </div>
+        <ul>
+          <li>Cleaned and validated large-scale census datasets (&gt;1M records) using Python and SQL.</li>
+          <li>Produced visualizations and statistical summaries for official demographic publications.</li>
+          <li>Assisted senior statisticians with A/B testing methodology for pilot survey instruments.</li>
+          <li>Documented data pipelines and standard operating procedures for new analyst onboarding.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Research Assistant</div>
+            <div class="resume-entry-org">University of Ghana &mdash; Department of Economics</div>
+          </div>
+          <span class="resume-entry-date">Sep 2021 – May 2022</span>
+        </div>
+        <ul>
+          <li>Conducted literature reviews and synthesized evidence for faculty-led policy research projects.</li>
+          <li>Coded qualitative interview data using thematic analysis in NVivo.</li>
+          <li>Contributed to a published working paper on informal sector labour market dynamics.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="resume-block">
+      <div class="resume-block-title">🎓 Education</div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">BSc Economics &amp; Statistics</div>
+            <div class="resume-entry-org">University of Ghana, Legon</div>
+          </div>
+          <span class="resume-entry-date">2018 – 2022</span>
+        </div>
+        <ul>
+          <li>First Class Honours &mdash; GPA: 3.85 / 4.0</li>
+          <li>Thesis: <em>"Impact of Mobile Money on Household Savings Behaviour in Rural Ghana"</em></li>
+          <li>Dean's List, all semesters; Best Student in Econometrics (2021)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="resume-block">
+      <div class="resume-block-title">🏅 Certifications</div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Google Data Analytics Professional Certificate</div>
+            <div class="resume-entry-org">Google / Coursera</div>
+          </div>
+          <span class="resume-entry-date">2023</span>
+        </div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">IBM Data Science Professional Certificate</div>
+            <div class="resume-entry-org">IBM / Coursera</div>
+          </div>
+          <span class="resume-entry-date">2022</span>
+        </div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Microsoft Certified: Power BI Data Analyst Associate</div>
+            <div class="resume-entry-org">Microsoft</div>
+          </div>
+          <span class="resume-entry-date">2024</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="resume-block">
+      <div class="resume-block-title">🛠️ Technical Skills</div>
+      <div class="resume-skills-grid">
+        <span class="tag">Python</span><span class="tag">R</span>
+        <span class="tag">SQL</span><span class="tag">PostgreSQL</span>
+        <span class="tag">BigQuery</span><span class="tag">Power BI</span>
+        <span class="tag">Tableau</span><span class="tag">Looker Studio</span>
+        <span class="tag">Pandas</span><span class="tag">NumPy</span>
+        <span class="tag">Scikit-learn</span><span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span><span class="tag">Plotly</span>
+        <span class="tag">Excel / VBA</span><span class="tag">SPSS</span>
+        <span class="tag">Qualtrics</span><span class="tag">Git</span>
+        <span class="tag">Jupyter</span><span class="tag">dbt</span>
+        <span class="tag">Google Sheets</span><span class="tag">NVivo</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>Designed &amp; built by <span>Oscar Tetteh</span> &mdash; &copy; 2026</p>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+</script>
+</body>
+</html>

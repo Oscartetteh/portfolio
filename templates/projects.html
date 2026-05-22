@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Oscar Tetteh</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="nav-logo" href="{{ url_for('index') }}">OT.</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('index') }}#about">About</a></li>
+    <li><a href="{{ url_for('index') }}#skills">Skills</a></li>
+    <li><a href="{{ url_for('projects') }}" class="active">Projects</a></li>
+    <li><a href="{{ url_for('resume') }}">Resume</a></li>
+    <li><a href="{{ url_for('index') }}#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="projects-page">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">My work</span>
+      <h1 class="section-title">Projects</h1>
+      <div class="section-line"></div>
+      <p style="color:var(--text-dim);margin-top:1rem;max-width:580px;margin-left:auto;margin-right:auto;">
+        A selection of data analysis, research, and visualization projects — from end-to-end
+        pipelines to interactive dashboards and published reports.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-banner"></div>
+        <div class="project-body">
+          <div class="project-type">Market Research &bull; Python &bull; Power BI</div>
+          <h3 class="project-title">Consumer Sentiment Analysis — FMCG Sector</h3>
+          <p class="project-desc">
+            Processed and analyzed 12,000+ survey responses to map brand perception across
+            six product categories. Applied sentiment scoring and factor analysis to surface
+            actionable insights that informed a $2M brand repositioning strategy.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">NLTK</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Qualtrics</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-outline btn-sm">📊 View Dashboard</a>
+            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-banner"></div>
+        <div class="project-body">
+          <div class="project-type">Econometrics &bull; R &bull; Policy Research</div>
+          <h3 class="project-title">Mobile Money &amp; Household Savings in Rural Ghana</h3>
+          <p class="project-desc">
+            Honours thesis examining the causal relationship between mobile money adoption
+            and household savings behaviour using a difference-in-differences regression
+            design on nationally representative panel data (GLSS 7).
+          </p>
+          <div class="project-tags">
+            <span class="tag">R</span>
+            <span class="tag">DiD Regression</span>
+            <span class="tag">ggplot2</span>
+            <span class="tag">Panel Data</span>
+            <span class="tag">SPSS</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-outline btn-sm">📄 Read Paper</a>
+            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-banner"></div>
+        <div class="project-body">
+          <div class="project-type">Business Intelligence &bull; SQL &bull; Tableau</div>
+          <h3 class="project-title">Retail Sales Performance Dashboard</h3>
+          <p class="project-desc">
+            Built an end-to-end BI pipeline — ingesting POS data via PostgreSQL, transforming
+            with dbt, and visualizing KPIs in Tableau. The dashboard became the team's primary
+            weekly reporting tool, covering revenue, margins, and regional trends.
+          </p>
+          <div class="project-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">dbt</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Python</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-outline btn-sm">📊 Live Demo</a>
+            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-banner"></div>
+        <div class="project-body">
+          <div class="project-type">Machine Learning &bull; Python &bull; Scikit-learn</div>
+          <h3 class="project-title">Customer Churn Prediction Model</h3>
+          <p class="project-desc">
+            Developed a binary classification pipeline using Random Forest and XGBoost on
+            telecom subscriber data. Achieved 87% accuracy and 0.91 AUC-ROC after SMOTE
+            resampling and hyperparameter tuning. Deployed results as an interactive report.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">SMOTE</span>
+            <span class="tag">Plotly</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-outline btn-sm">📈 Notebook</a>
+            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <div class="project-banner"></div>
+        <div class="project-body">
+          <div class="project-type">Geospatial Analysis &bull; Python &bull; Visualization</div>
+          <h3 class="project-title">Ghana Demographic &amp; Health Indicators Map</h3>
+          <p class="project-desc">
+            Visualized regional disparities in health, education, and poverty indicators
+            from the GDHS using GeoPandas and Plotly Choropleth maps. Published as an
+            interactive web report for policymakers and NGOs.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">GeoPandas</span>
+            <span class="tag">Plotly</span>
+            <span class="tag">Folium</span>
+            <span class="tag">Census Data</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-outline btn-sm">🗺️ View Map</a>
+            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <div class="project-banner"></div>
+        <div class="project-body">
+          <div class="project-type">Automation &bull; Python &bull; Reporting</div>
+          <h3 class="project-title">Automated Weekly Analyst Report Pipeline</h3>
+          <p class="project-desc">
+            Scripted a Python pipeline (pandas + schedule + smtplib) that pulls fresh data
+            from Google Sheets, computes KPIs, renders a styled HTML report, and emails it
+            to stakeholders every Monday morning — eliminating 4 hours of manual work weekly.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Google Sheets API</span>
+            <span class="tag">smtplib</span>
+            <span class="tag">Jinja2</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-outline btn-sm">📋 Case Study</a>
+            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-socials">
+    <a href="https://linkedin.com/in/oscar-tetteh" class="social-link" target="_blank" title="LinkedIn">in</a>
+    <a href="https://github.com/oscar-tetteh" class="social-link" target="_blank" title="GitHub">⌥</a>
+    <a href="mailto:bismarktetteh25@gmail.com" class="social-link" title="Email">@</a>
+  </div>
+  <p>Designed &amp; built by <span>Oscar Tetteh</span> &mdash; &copy; 2026</p>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oscar Tetteh | Research & Data Analyst</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav id="navbar">
+  <a class="nav-logo" href="#">OT.</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+    <li><a href="{{ url_for('resume') }}">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="hero-tag fade-in">Welcome to my portfolio</span>
+    <h1 class="fade-in delay-1">Hi, I'm <span>Oscar Tetteh</span></h1>
+    <p class="hero-subtitle fade-in delay-2">Research Analyst &amp; Data Analyst</p>
+    <p class="hero-desc fade-in delay-3">
+      Transforming complex datasets into actionable insights through rigorous analysis,
+      compelling visualizations, and evidence-based storytelling.
+    </p>
+    <div class="hero-btns fade-in delay-4">
+      <a href="{{ url_for('projects') }}" class="btn btn-primary">View My Work</a>
+      <a href="{{ url_for('download_resume') }}" class="btn btn-outline">⬇ Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ── -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Get to know me</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="{{ url_for('static', filename='images/IMG_9525_1.jpg') }}"
+             alt="Oscar Tetteh"
+             style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+      </div>
+
+      <div class="about-text">
+        <h3>Research Analyst &amp; Data Storyteller</h3>
+        <p>
+          I'm a results-driven Research and Data Analyst with a strong foundation in quantitative methods,
+          statistical modeling, and business intelligence. I specialize in converting raw, complex datasets
+          into clear narratives that drive strategic decision-making.
+        </p>
+        <p>
+          My work spans market research, policy analysis, and data visualization. I thrive at the
+          intersection of rigorous methodology and practical impact — whether that means building
+          interactive dashboards, automating reporting pipelines, or synthesizing literature for
+          evidence-based recommendations.
+        </p>
+        <p>
+          When I'm not wrangling data, I enjoy reading about behavioral economics, exploring
+          open datasets, and mentoring aspiring analysts.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat-box">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Tools Mastered</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="{{ url_for('resume') }}" class="btn btn-primary btn-sm">View Resume</a>
+          <a href="#contact" class="btn btn-outline btn-sm">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Skills ── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What I work with</span>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <div class="skill-cat-title">📊 Data Analysis</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">R</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">SciPy</span>
+          <span class="tag">Statsmodels</span>
+          <span class="tag">Excel</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">📈 Data Visualization</div>
+        <div class="skill-tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Seaborn</span>
+          <span class="tag">Plotly</span>
+          <span class="tag">ggplot2</span>
+          <span class="tag">Looker Studio</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">🗄️ Databases &amp; Querying</div>
+        <div class="skill-tags">
+          <span class="tag">SQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">dbt</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">🔬 Research Methods</div>
+        <div class="skill-tags">
+          <span class="tag">Survey Design</span>
+          <span class="tag">Regression Analysis</span>
+          <span class="tag">A/B Testing</span>
+          <span class="tag">Mixed Methods</span>
+          <span class="tag">Systematic Review</span>
+          <span class="tag">Meta-Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">☁️ Tools &amp; Platforms</div>
+        <div class="skill-tags">
+          <span class="tag">Git</span>
+          <span class="tag">Jupyter</span>
+          <span class="tag">Google Sheets</span>
+          <span class="tag">SPSS</span>
+          <span class="tag">Qualtrics</span>
+          <span class="tag">Notion</span>
+          <span class="tag">Slack</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-title">🤖 Machine Learning</div>
+        <div class="skill-tags">
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Linear Models</span>
+          <span class="tag">Classification</span>
+          <span class="tag">Clustering</span>
+          <span class="tag">Time Series</span>
+          <span class="tag">NLP Basics</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Let's connect</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Open to opportunities &amp; collaborations</h3>
+        <p>
+          Whether you have a project in mind, a research question, or just want to connect,
+          my inbox is always open. I'll do my best to get back to you promptly.
+        </p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-detail">
+            <span>Email</span>
+            <a href="mailto:bismarktetteh25@gmail.com">bismarktetteh25@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-detail">
+            <span>Location</span>
+            Available for Remote &amp; On-site
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div class="contact-detail">
+            <span>LinkedIn</span>
+            <a href="https://linkedin.com/in/oscar-tetteh" target="_blank">linkedin.com/in/oscar-tetteh</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🐙</div>
+          <div class="contact-detail">
+            <span>GitHub</span>
+            <a href="https://github.com/oscar-tetteh" target="_blank">github.com/oscar-tetteh</a>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Jane Smith" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Project Inquiry" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+          Send Message ✉️
+        </button>
+        <p id="form-feedback" style="text-align:center;color:var(--accent);display:none;margin-top:.5rem;font-size:.9rem;">
+          ✅ Thanks! I'll be in touch soon.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-socials">
+    <a href="https://linkedin.com/in/oscar-tetteh" class="social-link" target="_blank" title="LinkedIn">in</a>
+    <a href="https://github.com/oscar-tetteh" class="social-link" target="_blank" title="GitHub">⌥</a>
+    <a href="mailto:bismarktetteh25@gmail.com" class="social-link" title="Email">@</a>
+  </div>
+  <p>Designed &amp; built by <span>Oscar Tetteh</span> &mdash; &copy; 2026</p>
+</footer>
+
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navAnchors.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.45 });
+  sections.forEach(s => observer.observe(s));
+
+  // Navbar background on scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').style.background =
+      window.scrollY > 60 ? 'rgba(10,15,30,.97)' : 'rgba(10,15,30,.9)';
+  });
+
+  // Contact form demo
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-feedback').style.display = 'block';
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
