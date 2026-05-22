@@ -19,7 +19,7 @@ def projects():
 def download_resume():
     return send_from_directory(
         os.path.join(app.root_path, "static", "files"),
-        "Oscar_Tetteh_Resume.pdf",
+        "2026-05-22-Resume_Oscar_Tetteh.pdf",
         as_attachment=True
     )
 
