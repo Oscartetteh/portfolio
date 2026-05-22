@@ -300,18 +300,16 @@
     document.getElementById('navLinks').classList.toggle('open'));
 
   const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  new IntersectionObserver(entries => {
+  const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 }).observe
-  ? (() => {
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    revealEls.forEach(el => obs.observe(el));
-  })() : revealEls.forEach(el => el.classList.add('visible'));
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => obs.observe(el));
 
   window.addEventListener('scroll', () =>
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60));
+
+  // Ensure dark nav on page load (resume is a fully dark page)
+  document.getElementById('navbar').classList.add('scrolled');
 </script>
 </body>
 </html>

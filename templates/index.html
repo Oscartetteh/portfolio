@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oscar Bismark Tetteh | Data Scientist & Quantitative Economist</title>
+  <title>Oscar Bismark Tetteh | Data Scientist &amp; Quantitative Economist</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
 </head>
 <body>
-<!-- ── Aurora Background ── -->
+
+<!-- ── Aurora Background (dark sections only) ── -->
 <div class="aurora">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -17,7 +18,7 @@
 </div>
 
 <!-- ── Navigation ── -->
-<nav id="navbar">
+<nav id="navbar" class="nav-light">
   <a class="nav-logo" href="#">OBT.</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#home" class="active">Home</a></li>
@@ -32,10 +33,28 @@
   </button>
 </nav>
 
-<!-- ── Hero ── -->
+<!-- ── Hero (Light Background) ── -->
 <section class="hero" id="home">
-  <canvas id="particles-canvas"></canvas>
-  <div class="hero-bg-glow"></div>
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- Floating data cards (desktop only) -->
+  <div class="float-card float-card-1">
+    <span class="float-card-code">model.fit(X_train, y_train)</span>
+    <span class="float-card-label">Python · ML</span>
+  </div>
+  <div class="float-card float-card-2">
+    <span class="float-card-code">&#963;&#178; = &#931;(x&#7522;-&#956;)&#178;/n</span>
+    <span class="float-card-label">Statistics</span>
+  </div>
+  <div class="float-card float-card-3">
+    <span class="float-card-code">SELECT AVG(income) FROM data</span>
+    <span class="float-card-label">SQL</span>
+  </div>
+  <div class="float-card float-card-4">
+    <span class="float-card-code">R&#178; = 0.94 · p &lt; 0.001</span>
+    <span class="float-card-label">Econometrics</span>
+  </div>
+
   <div class="hero-content">
     <div class="hero-tag fade-in">Available for opportunities</div>
     <h1 class="fade-in delay-1">Oscar Bismark<br><span class="gradient-text">Tetteh</span></h1>
@@ -51,10 +70,13 @@
     </p>
     <div class="hero-btns fade-in delay-4">
       <a href="{{ url_for('projects') }}" class="btn btn-primary">View My Work</a>
-      <a href="{{ url_for('download_resume') }}" class="btn btn-outline">⬇ Download Resume</a>
+      <a href="{{ url_for('download_resume') }}" class="btn btn-outline">&#11015; Download Resume</a>
     </div>
   </div>
 </section>
+
+<!-- ── Section Wave Transition ── -->
+<div class="section-wave"></div>
 
 <!-- ── About ── -->
 <section id="about">
@@ -128,6 +150,76 @@
       <h2 class="section-title">Skills &amp; <span>Tools</span></h2>
       <p class="section-subtitle">A versatile toolkit built across years of applied research and data work.</p>
     </div>
+
+    <!-- Core Competencies Progress Bars -->
+    <div class="competencies-grid" id="competencies-grid">
+
+      <div class="comp-item" data-pct="95">
+        <div class="comp-header">
+          <span class="comp-label">Python</span>
+          <span class="comp-pct">95%</span>
+        </div>
+        <div class="comp-bar"><div class="comp-fill"></div></div>
+      </div>
+
+      <div class="comp-item" data-pct="90">
+        <div class="comp-header">
+          <span class="comp-label">SQL</span>
+          <span class="comp-pct">90%</span>
+        </div>
+        <div class="comp-bar"><div class="comp-fill"></div></div>
+      </div>
+
+      <div class="comp-item" data-pct="95">
+        <div class="comp-header">
+          <span class="comp-label">Statistical Analysis</span>
+          <span class="comp-pct">95%</span>
+        </div>
+        <div class="comp-bar"><div class="comp-fill"></div></div>
+      </div>
+
+      <div class="comp-item" data-pct="88">
+        <div class="comp-header">
+          <span class="comp-label">R</span>
+          <span class="comp-pct">88%</span>
+        </div>
+        <div class="comp-bar"><div class="comp-fill"></div></div>
+      </div>
+
+      <div class="comp-item" data-pct="92">
+        <div class="comp-header">
+          <span class="comp-label">Econometrics</span>
+          <span class="comp-pct">92%</span>
+        </div>
+        <div class="comp-bar"><div class="comp-fill"></div></div>
+      </div>
+
+      <div class="comp-item" data-pct="85">
+        <div class="comp-header">
+          <span class="comp-label">Power BI</span>
+          <span class="comp-pct">85%</span>
+        </div>
+        <div class="comp-bar"><div class="comp-fill"></div></div>
+      </div>
+
+      <div class="comp-item" data-pct="80">
+        <div class="comp-header">
+          <span class="comp-label">Machine Learning</span>
+          <span class="comp-pct">80%</span>
+        </div>
+        <div class="comp-bar"><div class="comp-fill"></div></div>
+      </div>
+
+      <div class="comp-item" data-pct="94">
+        <div class="comp-header">
+          <span class="comp-label">Research Analytics</span>
+          <span class="comp-pct">94%</span>
+        </div>
+        <div class="comp-bar"><div class="comp-fill"></div></div>
+      </div>
+
+    </div>
+    <!-- End Competencies -->
 
     <div class="skills-grid">
 
@@ -209,11 +301,13 @@
 
     <div class="contact-grid">
       <div class="reveal-left">
-        <h3>Let's work together</h3>
-        <p>
-          Whether you have a research question, a data project, or want to discuss policy analytics,
-          feel free to reach out. I'll get back to you as soon as I can.
-        </p>
+        <div class="contact-info">
+          <h3>Let's work together</h3>
+          <p>
+            Whether you have a research question, a data project, or want to discuss policy analytics,
+            feel free to reach out. I'll get back to you as soon as I can.
+          </p>
+        </div>
 
         <div class="contact-cards">
           <div class="contact-card">
@@ -298,132 +392,210 @@
 </footer>
 
 <script>
-  /* ── Particles ── */
-  const canvas = document.getElementById('particles-canvas');
+/* ── Hero Neural Network Canvas ── */
+(function () {
+  const canvas = document.getElementById('hero-canvas');
   const ctx = canvas.getContext('2d');
-  let particles = [];
+  let nodes = [];
+  let mouse = { x: -999, y: -999 };
+  const NODE_COUNT = 60;
+  const CONNECT_DIST = 130;
+  const MOUSE_DIST = 100;
 
-  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-  resize();
-  window.addEventListener('resize', () => { resize(); initParticles(); });
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
 
-  function initParticles() {
-    particles = [];
-    const count = Math.floor((canvas.width * canvas.height) / 18000);
-    for (let i = 0; i < count; i++) {
-      particles.push({
+  function initNodes() {
+    nodes = [];
+    for (let i = 0; i < NODE_COUNT; i++) {
+      nodes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        r: Math.random() * 1.5 + .3,
-        dx: (Math.random() - .5) * .3,
-        dy: (Math.random() - .5) * .3,
-        alpha: Math.random() * .5 + .1
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        baseR: Math.random() * 1.5 + 1.5,
+        phase: Math.random() * Math.PI * 2
       });
     }
   }
-  initParticles();
 
-  function drawParticles() {
+  function drawFrame(ts) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
+
+    nodes.forEach(n => {
+      // Update position
+      n.x += n.vx;
+      n.y += n.vy;
+      if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
+      if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+
+      // Mouse attraction
+      const dx = mouse.x - n.x;
+      const dy = mouse.y - n.y;
+      const dist = Math.hypot(dx, dy);
+      if (dist < MOUSE_DIST && dist > 0) {
+        const force = (MOUSE_DIST - dist) / MOUSE_DIST * 0.012;
+        n.vx += dx / dist * force;
+        n.vy += dy / dist * force;
+      }
+
+      // Speed cap
+      const speed = Math.hypot(n.vx, n.vy);
+      if (speed > 0.8) { n.vx = (n.vx / speed) * 0.8; n.vy = (n.vy / speed) * 0.8; }
+
+      // Pulse radius
+      n.phase += 0.018;
+      const r = n.baseR + Math.sin(n.phase) * 0.6;
+
+      // Draw node
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(96,165,250,${p.alpha})`;
+      ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(37,99,235,0.4)';
       ctx.fill();
-      p.x += p.dx; p.y += p.dy;
-      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
     });
 
     // Draw connecting lines
-    particles.forEach((a, i) => {
-      particles.slice(i + 1).forEach(b => {
-        const dist = Math.hypot(a.x - b.x, a.y - b.y);
-        if (dist < 120) {
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d < CONNECT_DIST) {
+          const alpha = (1 - d / CONNECT_DIST) * 0.12;
           ctx.beginPath();
-          ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(96,165,250,${.08 * (1 - dist / 120)})`;
-          ctx.lineWidth = .5;
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(37,99,235,${alpha})`;
+          ctx.lineWidth = 0.8;
           ctx.stroke();
         }
+      }
+    }
+
+    requestAnimationFrame(drawFrame);
+  }
+
+  canvas.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+  canvas.addEventListener('mouseleave', () => { mouse.x = -999; mouse.y = -999; });
+
+  window.addEventListener('resize', () => { resize(); initNodes(); });
+  resize();
+  initNodes();
+  requestAnimationFrame(drawFrame);
+})();
+
+/* ── Typewriter ── */
+const roles = ['Data Scientist', 'Quantitative Economist', 'Statistician', 'Policy Analyst', 'Research Analyst'];
+let ri = 0, ci = 0, deleting = false;
+const twEl = document.getElementById('typewriter');
+
+function type() {
+  const word = roles[ri];
+  twEl.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+  let delay = deleting ? 60 : 100;
+  if (!deleting && ci > word.length) { delay = 1800; deleting = true; }
+  else if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; delay = 300; }
+  setTimeout(type, delay);
+}
+setTimeout(type, 1200);
+
+/* ── Animated Counters ── */
+function animateCounter(el) {
+  const target = +el.dataset.target;
+  let count = 0;
+  const step = Math.ceil(target / 40);
+  const timer = setInterval(() => {
+    count = Math.min(count + step, target);
+    el.textContent = count + '+';
+    if (count >= target) clearInterval(timer);
+  }, 40);
+}
+
+/* ── Scroll Reveal ── */
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      const counter = e.target.querySelector('[data-target]');
+      if (counter) animateCounter(counter);
+      if (e.target.dataset.target) animateCounter(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ── Core Competencies Progress Bars ── */
+const compGrid = document.getElementById('competencies-grid');
+let compAnimated = false;
+const compObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !compAnimated) {
+      compAnimated = true;
+      compGrid.querySelectorAll('.comp-item').forEach(item => {
+        const pct = item.dataset.pct;
+        const fill = item.querySelector('.comp-fill');
+        if (fill && pct) {
+          // Small delay to allow layout, then animate
+          requestAnimationFrame(() => {
+            fill.style.width = pct + '%';
+          });
+        }
       });
-    });
-    requestAnimationFrame(drawParticles);
+    }
+  });
+}, { threshold: 0.2 });
+if (compGrid) compObserver.observe(compGrid);
+
+/* ── Active Nav on Scroll ── */
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a');
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navAnchors.forEach(a => a.classList.remove('active'));
+      const link = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => sectionObserver.observe(s));
+
+/* ── Navbar: light over hero, dark when scrolled ── */
+const navbar = document.getElementById('navbar');
+const heroSection = document.getElementById('home');
+
+function updateNav() {
+  const heroHeight = heroSection ? heroSection.offsetHeight : window.innerHeight;
+  if (window.scrollY < heroHeight - 68) {
+    navbar.classList.add('nav-light');
+    navbar.classList.remove('scrolled');
+  } else {
+    navbar.classList.remove('nav-light');
+    navbar.classList.add('scrolled');
   }
-  drawParticles();
+}
 
-  /* ── Typewriter ── */
-  const roles = ['Data Scientist', 'Quantitative Economist', 'Statistician', 'Policy Analyst', 'Research Analyst'];
-  let ri = 0, ci = 0, deleting = false;
-  const el = document.getElementById('typewriter');
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
 
-  function type() {
-    const word = roles[ri];
-    el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
-    let delay = deleting ? 60 : 100;
-    if (!deleting && ci > word.length) { delay = 1800; deleting = true; }
-    else if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; delay = 300; }
-    setTimeout(type, delay);
-  }
-  setTimeout(type, 1200);
+/* ── Hamburger ── */
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-  /* ── Animated Counters ── */
-  function animateCounter(el) {
-    const target = +el.dataset.target;
-    let count = 0;
-    const step = Math.ceil(target / 40);
-    const timer = setInterval(() => {
-      count = Math.min(count + step, target);
-      el.textContent = count + '+';
-      if (count >= target) clearInterval(timer);
-    }, 40);
-  }
-
-  /* ── Scroll Reveal ── */
-  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        // Trigger counter if stat
-        const counter = e.target.querySelector('[data-target]');
-        if (counter) animateCounter(counter);
-        if (e.target.dataset.target) animateCounter(e.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => revealObserver.observe(el));
-
-  /* ── Active Nav on Scroll ── */
-  const sections = document.querySelectorAll('section[id]');
-  const navAnchors = document.querySelectorAll('.nav-links a');
-  const sectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navAnchors.forEach(a => a.classList.remove('active'));
-        const link = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-        if (link) link.classList.add('active');
-      }
-    });
-  }, { threshold: 0.4 });
-  sections.forEach(s => sectionObserver.observe(s));
-
-  /* ── Navbar Scroll ── */
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
-
-  /* ── Hamburger ── */
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-  /* ── Contact Form ── */
-  function handleSubmit(e) {
-    e.preventDefault();
-    document.getElementById('form-feedback').style.display = 'block';
-    e.target.reset();
-  }
+/* ── Contact Form ── */
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-feedback').style.display = 'block';
+  e.target.reset();
+}
 </script>
 </body>
 </html>
