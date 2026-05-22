@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume | Oscar Tetteh</title>
+  <title>Resume | Oscar Bismark Tetteh</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
 
 <nav id="navbar">
-  <a class="nav-logo" href="{{ url_for('index') }}">OT.</a>
+  <a class="nav-logo" href="{{ url_for('index') }}">OBT.</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="{{ url_for('index') }}">Home</a></li>
     <li><a href="{{ url_for('index') }}#about">About</a></li>
@@ -29,23 +29,21 @@
     <div class="resume-header-bar">
       <div>
         <span class="section-tag">Curriculum Vitae</span>
-        <h1 class="section-title" style="text-align:left;">Oscar Tetteh</h1>
-        <p style="color:var(--text-dim);margin-top:.25rem;">Research Analyst &amp; Data Analyst</p>
+        <h1 class="section-title" style="text-align:left;">Oscar Bismark Tetteh</h1>
+        <p style="color:var(--text-dim);margin-top:.25rem;">Data Scientist &amp; Quantitative Economist &mdash; Hartford, CT &mdash; +1 (959) 256 6411</p>
       </div>
-      <a href="{{ url_for('download_resume') }}" class="btn btn-primary">
-        ⬇ Download PDF Resume
-      </a>
+      <a href="{{ url_for('download_resume') }}" class="btn btn-primary">⬇ Download PDF Resume</a>
     </div>
 
     <!-- Summary -->
     <div class="resume-block">
       <div class="resume-block-title">🧑‍💼 Professional Summary</div>
       <p style="color:var(--text-dim);font-size:.95rem;line-height:1.8;">
-        Detail-oriented Research and Data Analyst with 3+ years of experience transforming
-        complex datasets into actionable insights. Proficient in Python, SQL, R, Power BI,
-        and Tableau. Proven track record of supporting evidence-based decision-making across
-        market research, policy analysis, and business intelligence contexts. Strong communicator
-        able to present technical findings to non-technical stakeholders.
+        Data scientist, statistician, and quantitative economist with over five years of experience across academia,
+        the private sector, and the public sector. Specializes in forecasting, statistical analysis, data modelling,
+        and applied research, with strong experience using Python, R, SQL, and data pipelines to turn complex data
+        into clear, decision-ready insights. Work is grounded in analytical rigour, attention to detail, and a
+        practical approach to solving problems through evidence-based analysis.
       </p>
     </div>
 
@@ -56,50 +54,113 @@
       <div class="resume-entry">
         <div class="resume-entry-header">
           <div>
-            <div class="resume-entry-title">Research Analyst</div>
-            <div class="resume-entry-org">Market Insights Group &mdash; Accra, Ghana</div>
+            <div class="resume-entry-title">Associate Analyst</div>
+            <div class="resume-entry-org">State of Connecticut &mdash; Dept. of Children and Family, Bureau of Continuous Improvement &mdash; Hartford, CT</div>
           </div>
           <span class="resume-entry-date">Jan 2024 – Present</span>
         </div>
         <ul>
-          <li>Designed and managed end-to-end quantitative surveys (n&gt;500) on consumer behavior and market trends.</li>
-          <li>Built automated weekly dashboards in Power BI that reduced manual reporting time by 60%.</li>
-          <li>Applied regression and segmentation models in Python to identify high-value customer cohorts.</li>
-          <li>Collaborated with strategy teams to translate findings into quarterly business recommendations.</li>
-          <li>Led a 3-person analyst team during a national brand perception study covering 6 regions.</li>
+          <li>Re-evaluated the Structured Decision Making (SDM) model in child welfare to measure predictive performance using actuarial risk modelling, survival analysis, and applied statistical methods.</li>
+          <li>Built SQL- and Python-based workflows to extract, join, clean, and prepare administrative and case-level data for model validation and performance assessment.</li>
+          <li>Used pandas and NumPy to transform large datasets and support risk modelling, subgroup analysis, and research reporting.</li>
+          <li>Conducted exploratory data analysis, statistical testing, and predictor assessment to evaluate model performance across cases and population subgroups.</li>
+          <li>Communicated technical findings through reports, summaries, and presentations to support evidence-based improvements in child welfare decision-support tools.</li>
         </ul>
       </div>
 
       <div class="resume-entry">
         <div class="resume-entry-header">
           <div>
-            <div class="resume-entry-title">Data Analyst Intern</div>
-            <div class="resume-entry-org">Ghana Statistical Service &mdash; Accra, Ghana</div>
+            <div class="resume-entry-title">Senior Policy and Data Analyst</div>
+            <div class="resume-entry-org">Government of Alberta &mdash; Ministry of Education, Office of Statistical Information (OSI) &mdash; Edmonton, Canada</div>
           </div>
-          <span class="resume-entry-date">Jun 2022 – Dec 2023</span>
+          <span class="resume-entry-date">Sep 2024 – Dec 2025</span>
         </div>
         <ul>
-          <li>Cleaned and validated large-scale census datasets (&gt;1M records) using Python and SQL.</li>
-          <li>Produced visualizations and statistical summaries for official demographic publications.</li>
-          <li>Assisted senior statisticians with A/B testing methodology for pilot survey instruments.</li>
-          <li>Documented data pipelines and standard operating procedures for new analyst onboarding.</li>
+          <li>Developed statistical models, scenario analyses, and sensitivity analyses to forecast funding requirements and assess the impact of policy changes on budget allocations and educational equity.</li>
+          <li>Analyzed large policy and financial datasets to identify trends, quantify potential outcomes, and support evidence-based decision-making.</li>
+          <li>Researched and evaluated funding policy approaches across Canadian and international jurisdictions to inform improvements to Alberta's funding framework.</li>
+          <li>Produced analytical summaries, reports, and briefing materials to communicate technical findings and recommendations to decision-makers.</li>
         </ul>
       </div>
 
       <div class="resume-entry">
         <div class="resume-entry-header">
           <div>
-            <div class="resume-entry-title">Research Assistant</div>
-            <div class="resume-entry-org">University of Ghana &mdash; Department of Economics</div>
+            <div class="resume-entry-title">Policy and Data Analyst</div>
+            <div class="resume-entry-org">Government of Alberta &mdash; Service Alberta and Red Tape Reduction, Economic &amp; Data Unit &mdash; Edmonton, Canada</div>
           </div>
-          <span class="resume-entry-date">Sep 2021 – May 2022</span>
+          <span class="resume-entry-date">May 2024 – Sep 2024</span>
         </div>
         <ul>
-          <li>Conducted literature reviews and synthesized evidence for faculty-led policy research projects.</li>
-          <li>Coded qualitative interview data using thematic analysis in NVivo.</li>
-          <li>Contributed to a published working paper on informal sector labour market dynamics.</li>
+          <li>Conducted forecasting and quantitative analysis on Alberta iGaming and liquor markup trends to support policy and planning decisions.</li>
+          <li>Integrated and analyzed data from multiple sources to support dashboard development, forecasting, and market analysis.</li>
+          <li>Tracked retail price movements across Alberta and comparator provinces to inform economic analysis and reporting.</li>
+          <li>Prepared policy briefs, technical summaries, and presentations to communicate complex findings to diverse audiences.</li>
         </ul>
       </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Research &amp; Data Analyst</div>
+            <div class="resume-entry-org">University of Saskatchewan &mdash; Department of Economics &mdash; Canada</div>
+          </div>
+          <span class="resume-entry-date">Sep 2022 – Apr 2024</span>
+        </div>
+        <ul>
+          <li>Collected, extracted, cleaned, and analyzed data from Statistics Canada, the U.S. Bureau of Labor Statistics, and other databases using quantitative research methods.</li>
+          <li>Worked with multi-source datasets to support labour market and energy price research.</li>
+          <li>Conducted statistical analysis and interpreted findings to support research conclusions and evidence-based recommendations.</li>
+          <li>Produced research outputs and summaries for academic and policy audiences.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Economic Policy and Data Analyst</div>
+            <div class="resume-entry-org">Institute of Statistical &amp; Social Economic Research (ISSER) &mdash; Economic Policy Department</div>
+          </div>
+          <span class="resume-entry-date">May 2021 – May 2022</span>
+        </div>
+        <ul>
+          <li>Conducted in-depth analysis of economic trends, policy issues, and development challenges, with a focus on agriculture, rural transformation, and economic sustainability.</li>
+          <li>Utilized quantitative and qualitative research methods to analyse economic data, model policy scenarios, and assess the impact of policy interventions.</li>
+          <li>Prepared policy briefs, reports, and presentations to communicate research findings and recommendations to policymakers and donors.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Junior Economic and Data Policy Analyst</div>
+            <div class="resume-entry-org">Institute of Statistical &amp; Social Economic Research (ISSER) &mdash; Economic Policy Department</div>
+          </div>
+          <span class="resume-entry-date">Apr 2020 – Apr 2021</span>
+        </div>
+        <ul>
+          <li>Assisted senior analysts in economic policy research projects focusing on agriculture, rural transformation, and economic sustainability.</li>
+          <li>Supported economic policy research by cleaning, organizing, and analyzing quantitative datasets using statistical methods.</li>
+          <li>Assisted with econometric analysis, regression modelling, and policy evaluation to examine economic patterns and outcomes.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Data Analyst</div>
+            <div class="resume-entry-org">Ghana Cocoa Marketing Company &mdash; Government of Ghana</div>
+          </div>
+          <span class="resume-entry-date">May 2018 – Aug 2019</span>
+        </div>
+        <ul>
+          <li>Gathered, cleaned, validated, and analyzed operational and market data related to cocoa production, sales, and distribution.</li>
+          <li>Conducted exploratory data analysis to identify trends, patterns, and anomalies in commodity-related datasets.</li>
+          <li>Analyzed supply and demand patterns to support market trend monitoring and reporting.</li>
+        </ul>
+      </div>
+
     </div>
 
     <!-- Education -->
@@ -109,51 +170,51 @@
       <div class="resume-entry">
         <div class="resume-entry-header">
           <div>
-            <div class="resume-entry-title">BSc Economics &amp; Statistics</div>
-            <div class="resume-entry-org">University of Ghana, Legon</div>
+            <div class="resume-entry-title">Master's in Applied Economics</div>
+            <div class="resume-entry-org">University of Saskatchewan, Canada</div>
           </div>
-          <span class="resume-entry-date">2018 – 2022</span>
+          <span class="resume-entry-date">August 2024</span>
         </div>
         <ul>
-          <li>First Class Honours &mdash; GPA: 3.85 / 4.0</li>
-          <li>Thesis: <em>"Impact of Mobile Money on Household Savings Behaviour in Rural Ghana"</em></li>
-          <li>Dean's List, all semesters; Best Student in Econometrics (2021)</li>
+          <li>Relevant Courses: Econometrics, International Trade, Development Economics, Advanced Quantitative Methods, Microeconomic &amp; Macroeconomic Theory, Time Series Analysis.</li>
+          <li>Thesis: <em>Economic Determinants of Food Security in the Northwest Territories, Canada</em></li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Certificate in Circular Economy &amp; Implementation Science</div>
+            <div class="resume-entry-org">University of Guelph, Canada</div>
+          </div>
+          <span class="resume-entry-date">May 2022</span>
+        </div>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">B.A. Economics, Statistics and Mathematics</div>
+            <div class="resume-entry-org">University of Ghana, Ghana</div>
+          </div>
+          <span class="resume-entry-date">June 2020</span>
+        </div>
+        <ul>
+          <li>Relevant Courses: Data Analysis, Actuarial Statistics, Statistical Inference, Probability Distributions, Non-Parametric Statistics, Cost Benefit Analysis, Analysis of Experiments, Micro and Macroeconomics.</li>
         </ul>
       </div>
     </div>
 
-    <!-- Certifications -->
+    <!-- Research -->
     <div class="resume-block">
-      <div class="resume-block-title">🏅 Certifications</div>
-
+      <div class="resume-block-title">🔬 Research Projects</div>
       <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title">Google Data Analytics Professional Certificate</div>
-            <div class="resume-entry-org">Google / Coursera</div>
-          </div>
-          <span class="resume-entry-date">2023</span>
-        </div>
-      </div>
-
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title">IBM Data Science Professional Certificate</div>
-            <div class="resume-entry-org">IBM / Coursera</div>
-          </div>
-          <span class="resume-entry-date">2022</span>
-        </div>
-      </div>
-
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title">Microsoft Certified: Power BI Data Analyst Associate</div>
-            <div class="resume-entry-org">Microsoft</div>
-          </div>
-          <span class="resume-entry-date">2024</span>
-        </div>
+        <ul>
+          <li>Relationship between the Canada–US exchange rate and commodity prices.</li>
+          <li>Gravity models of trade for EU panel data.</li>
+          <li>Simulation-based inference using bootstrap and Monte Carlo techniques applied to the US exchange rate and commodity prices.</li>
+          <li><em>Master's Thesis:</em> Economic Determinants of Food Security in the Northwest Territories, Canada.</li>
+        </ul>
       </div>
     </div>
 
@@ -161,17 +222,31 @@
     <div class="resume-block">
       <div class="resume-block-title">🛠️ Technical Skills</div>
       <div class="resume-skills-grid">
-        <span class="tag">Python</span><span class="tag">R</span>
-        <span class="tag">SQL</span><span class="tag">PostgreSQL</span>
-        <span class="tag">BigQuery</span><span class="tag">Power BI</span>
-        <span class="tag">Tableau</span><span class="tag">Looker Studio</span>
-        <span class="tag">Pandas</span><span class="tag">NumPy</span>
-        <span class="tag">Scikit-learn</span><span class="tag">Matplotlib</span>
-        <span class="tag">Seaborn</span><span class="tag">Plotly</span>
-        <span class="tag">Excel / VBA</span><span class="tag">SPSS</span>
-        <span class="tag">Qualtrics</span><span class="tag">Git</span>
-        <span class="tag">Jupyter</span><span class="tag">dbt</span>
-        <span class="tag">Google Sheets</span><span class="tag">NVivo</span>
+        <span class="tag">Python</span>
+        <span class="tag">R</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Excel / VBA</span>
+        <span class="tag">Visio</span>
+        <span class="tag">ETL / ELT Pipelines</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">BigQuery</span>
+        <span class="tag">QGIS</span>
+        <span class="tag">Spatial Analysis</span>
+        <span class="tag">Time Series</span>
+        <span class="tag">Forecasting</span>
+        <span class="tag">Survival Analysis</span>
+        <span class="tag">Econometrics</span>
+        <span class="tag">Bootstrap &amp; Monte Carlo</span>
+        <span class="tag">Git / GitHub</span>
+        <span class="tag">Jupyter</span>
+        <span class="tag">VS Code</span>
+        <span class="tag">pyenv / venv / conda</span>
+        <span class="tag">SPSS</span>
       </div>
     </div>
 
@@ -179,7 +254,7 @@
 </div>
 
 <footer>
-  <p>Designed &amp; built by <span>Oscar Tetteh</span> &mdash; &copy; 2026</p>
+  <p>Designed &amp; built by <span>Oscar Bismark Tetteh</span> &mdash; &copy; 2026</p>
 </footer>
 
 <script>

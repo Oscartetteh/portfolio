@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Oscar Tetteh</title>
+  <title>Projects | Oscar Bismark Tetteh</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
 
 <nav id="navbar">
-  <a class="nav-logo" href="{{ url_for('index') }}">OT.</a>
+  <a class="nav-logo" href="{{ url_for('index') }}">OBT.</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="{{ url_for('index') }}">Home</a></li>
     <li><a href="{{ url_for('index') }}#about">About</a></li>
@@ -28,11 +28,11 @@
 
     <div class="section-header">
       <span class="section-tag">My work</span>
-      <h1 class="section-title">Projects</h1>
+      <h1 class="section-title">Projects &amp; Research</h1>
       <div class="section-line"></div>
-      <p style="color:var(--text-dim);margin-top:1rem;max-width:580px;margin-left:auto;margin-right:auto;">
-        A selection of data analysis, research, and visualization projects — from end-to-end
-        pipelines to interactive dashboards and published reports.
+      <p style="color:var(--text-dim);margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto;">
+        A selection of research, data modelling, and analytical projects spanning public policy,
+        economics, child welfare, and commodity markets.
       </p>
     </div>
 
@@ -42,23 +42,25 @@
       <div class="project-card">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Market Research &bull; Python &bull; Power BI</div>
-          <h3 class="project-title">Consumer Sentiment Analysis — FMCG Sector</h3>
+          <div class="project-type">Child Welfare &bull; Risk Modelling &bull; Python &bull; SQL</div>
+          <h3 class="project-title">SDM Model Re-evaluation — Child Welfare Risk Assessment</h3>
           <p class="project-desc">
-            Processed and analyzed 12,000+ survey responses to map brand perception across
-            six product categories. Applied sentiment scoring and factor analysis to surface
-            actionable insights that informed a $2M brand repositioning strategy.
+            Re-evaluated the Structured Decision Making (SDM) model used in Connecticut child welfare
+            to measure predictive performance using actuarial risk modelling and survival analysis.
+            Built SQL- and Python-based workflows to clean and prepare case-level administrative data
+            for model validation across population subgroups.
           </p>
           <div class="project-tags">
             <span class="tag">Python</span>
-            <span class="tag">NLTK</span>
-            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Survival Analysis</span>
             <span class="tag">Pandas</span>
-            <span class="tag">Qualtrics</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Risk Modelling</span>
           </div>
           <div class="project-links">
-            <a href="#" class="btn btn-outline btn-sm">📊 View Dashboard</a>
-            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+            <a href="#" class="btn btn-outline btn-sm">📄 View Report</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
@@ -67,23 +69,25 @@
       <div class="project-card">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Econometrics &bull; R &bull; Policy Research</div>
-          <h3 class="project-title">Mobile Money &amp; Household Savings in Rural Ghana</h3>
+          <div class="project-type">Public Policy &bull; Forecasting &bull; R &bull; Python</div>
+          <h3 class="project-title">Education Funding Forecast &amp; Policy Scenario Analysis — Alberta</h3>
           <p class="project-desc">
-            Honours thesis examining the causal relationship between mobile money adoption
-            and household savings behaviour using a difference-in-differences regression
-            design on nationally representative panel data (GLSS 7).
+            Developed statistical models, scenario analyses, and sensitivity analyses to forecast
+            funding requirements and assess the impact of policy changes on budget allocations and
+            educational equity for the Alberta Ministry of Education. Researched comparative approaches
+            across Canadian and international jurisdictions.
           </p>
           <div class="project-tags">
             <span class="tag">R</span>
-            <span class="tag">DiD Regression</span>
-            <span class="tag">ggplot2</span>
-            <span class="tag">Panel Data</span>
-            <span class="tag">SPSS</span>
+            <span class="tag">Python</span>
+            <span class="tag">Forecasting</span>
+            <span class="tag">Scenario Analysis</span>
+            <span class="tag">Policy Research</span>
+            <span class="tag">Power BI</span>
           </div>
           <div class="project-links">
-            <a href="#" class="btn btn-outline btn-sm">📄 Read Paper</a>
-            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+            <a href="#" class="btn btn-outline btn-sm">📄 View Brief</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
@@ -92,23 +96,25 @@
       <div class="project-card">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Business Intelligence &bull; SQL &bull; Tableau</div>
-          <h3 class="project-title">Retail Sales Performance Dashboard</h3>
+          <div class="project-type">Econometrics &bull; R &bull; Master's Research</div>
+          <h3 class="project-title">Economic Determinants of Food Security in the Northwest Territories</h3>
           <p class="project-desc">
-            Built an end-to-end BI pipeline — ingesting POS data via PostgreSQL, transforming
-            with dbt, and visualizing KPIs in Tableau. The dashboard became the team's primary
-            weekly reporting tool, covering revenue, margins, and regional trends.
+            Master's thesis investigating the economic factors driving food security outcomes in
+            Canada's Northwest Territories. Applied advanced econometric methods to panel data,
+            identifying key socio-economic and geographic determinants to support evidence-based
+            policy recommendations for remote and Indigenous communities.
           </p>
           <div class="project-tags">
-            <span class="tag">SQL</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">dbt</span>
-            <span class="tag">Tableau</span>
-            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">Econometrics</span>
+            <span class="tag">Panel Data</span>
+            <span class="tag">Policy Analysis</span>
+            <span class="tag">ggplot2</span>
+            <span class="tag">Statistics Canada</span>
           </div>
           <div class="project-links">
-            <a href="#" class="btn btn-outline btn-sm">📊 Live Demo</a>
-            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+            <a href="#" class="btn btn-outline btn-sm">📄 Read Thesis</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
@@ -117,23 +123,23 @@
       <div class="project-card">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Machine Learning &bull; Python &bull; Scikit-learn</div>
-          <h3 class="project-title">Customer Churn Prediction Model</h3>
+          <div class="project-type">Simulation &bull; R &bull; Statistical Inference</div>
+          <h3 class="project-title">Bootstrap &amp; Monte Carlo Inference — Exchange Rate &amp; Commodity Prices</h3>
           <p class="project-desc">
-            Developed a binary classification pipeline using Random Forest and XGBoost on
-            telecom subscriber data. Achieved 87% accuracy and 0.91 AUC-ROC after SMOTE
-            resampling and hyperparameter tuning. Deployed results as an interactive report.
+            Applied simulation-based inference using bootstrap and Monte Carlo techniques to analyze
+            the relationship between the US exchange rate and commodity prices. Assessed the statistical
+            properties of estimators and constructed confidence intervals under non-standard distributions.
           </p>
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">XGBoost</span>
-            <span class="tag">SMOTE</span>
-            <span class="tag">Plotly</span>
+            <span class="tag">R</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">Monte Carlo</span>
+            <span class="tag">Time Series</span>
+            <span class="tag">Statistical Inference</span>
           </div>
           <div class="project-links">
-            <a href="#" class="btn btn-outline btn-sm">📈 Notebook</a>
-            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+            <a href="#" class="btn btn-outline btn-sm">📈 View Analysis</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
@@ -142,23 +148,24 @@
       <div class="project-card">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Geospatial Analysis &bull; Python &bull; Visualization</div>
-          <h3 class="project-title">Ghana Demographic &amp; Health Indicators Map</h3>
+          <div class="project-type">International Trade &bull; R &bull; Panel Data</div>
+          <h3 class="project-title">Gravity Models of Trade — EU Panel Data</h3>
           <p class="project-desc">
-            Visualized regional disparities in health, education, and poverty indicators
-            from the GDHS using GeoPandas and Plotly Choropleth maps. Published as an
-            interactive web report for policymakers and NGOs.
+            Estimated gravity models of bilateral trade for European Union member states using
+            panel data methods. Analyzed the role of economic size, distance, and trade agreements
+            in determining trade flows, with results informing understanding of post-Brexit trade
+            pattern shifts.
           </p>
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">GeoPandas</span>
-            <span class="tag">Plotly</span>
-            <span class="tag">Folium</span>
-            <span class="tag">Census Data</span>
+            <span class="tag">R</span>
+            <span class="tag">Gravity Model</span>
+            <span class="tag">Panel Data</span>
+            <span class="tag">International Trade</span>
+            <span class="tag">Econometrics</span>
           </div>
           <div class="project-links">
-            <a href="#" class="btn btn-outline btn-sm">🗺️ View Map</a>
-            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+            <a href="#" class="btn btn-outline btn-sm">📄 View Paper</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
@@ -167,23 +174,25 @@
       <div class="project-card">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Automation &bull; Python &bull; Reporting</div>
-          <h3 class="project-title">Automated Weekly Analyst Report Pipeline</h3>
+          <div class="project-type">Market Analysis &bull; Python &bull; Forecasting</div>
+          <h3 class="project-title">Alberta iGaming &amp; Liquor Markup Trend Forecasting</h3>
           <p class="project-desc">
-            Scripted a Python pipeline (pandas + schedule + smtplib) that pulls fresh data
-            from Google Sheets, computes KPIs, renders a styled HTML report, and emails it
-            to stakeholders every Monday morning — eliminating 4 hours of manual work weekly.
+            Conducted quantitative forecasting and analysis of iGaming revenue and liquor markup
+            pricing trends in Alberta. Integrated multi-source datasets for dashboard development
+            and tracked retail price movements across provinces to inform economic planning and
+            policy decisions at the provincial level.
           </p>
           <div class="project-tags">
             <span class="tag">Python</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">Google Sheets API</span>
-            <span class="tag">smtplib</span>
-            <span class="tag">Jinja2</span>
+            <span class="tag">Forecasting</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Market Analysis</span>
+            <span class="tag">Dashboard</span>
           </div>
           <div class="project-links">
-            <a href="#" class="btn btn-outline btn-sm">📋 Case Study</a>
-            <a href="#" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);">🐙 GitHub</a>
+            <a href="#" class="btn btn-outline btn-sm">📊 View Dashboard</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
@@ -194,11 +203,11 @@
 
 <footer>
   <div class="footer-socials">
-    <a href="https://linkedin.com/in/oscar-tetteh" class="social-link" target="_blank" title="LinkedIn">in</a>
-    <a href="https://github.com/oscar-tetteh" class="social-link" target="_blank" title="GitHub">⌥</a>
-    <a href="mailto:bismarktetteh25@gmail.com" class="social-link" title="Email">@</a>
+    <a href="https://linkedin.com/in/oscar-bismark-tetteh" class="social-link" target="_blank" title="LinkedIn">in</a>
+    <a href="https://github.com/Oscartetteh" class="social-link" target="_blank" title="GitHub">⌥</a>
+    <a href="mailto:Oscar.Tetteh@ct.gov" class="social-link" title="Email">@</a>
   </div>
-  <p>Designed &amp; built by <span>Oscar Tetteh</span> &mdash; &copy; 2026</p>
+  <p>Designed &amp; built by <span>Oscar Bismark Tetteh</span> &mdash; &copy; 2026</p>
 </footer>
 
 <script>
