@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
+<div class="aurora">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
 
 <nav id="navbar">
   <a class="nav-logo" href="{{ url_for('index') }}">OBT.</a>
@@ -26,23 +31,26 @@
 <div class="projects-page">
   <div class="container">
 
-    <div class="section-header">
+    <div class="section-header reveal">
       <span class="section-tag">My work</span>
-      <h1 class="section-title">Projects &amp; Research</h1>
-      <div class="section-line"></div>
-      <p style="color:var(--text-dim);margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto;">
-        A selection of research, data modelling, and analytical projects spanning public policy,
+      <h1 class="section-title">Projects &amp; <span>Research</span></h1>
+      <p class="section-subtitle">
+        Research, data modelling, and analytical projects spanning public policy,
         economics, child welfare, and commodity markets.
       </p>
     </div>
 
     <div class="projects-grid">
 
-      <!-- Project 1 -->
-      <div class="project-card">
+      <div class="project-card reveal delay-100">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Child Welfare &bull; Risk Modelling &bull; Python &bull; SQL</div>
+          <div class="project-number">Project 01</div>
+          <div class="project-type">
+            <span class="project-type-tag">Child Welfare</span>
+            <span class="project-type-tag">Risk Modelling</span>
+            <span class="project-type-tag">Python</span>
+          </div>
           <h3 class="project-title">SDM Model Re-evaluation — Child Welfare Risk Assessment</h3>
           <p class="project-desc">
             Re-evaluated the Structured Decision Making (SDM) model used in Connecticut child welfare
@@ -51,25 +59,26 @@
             for model validation across population subgroups.
           </p>
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Survival Analysis</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">NumPy</span>
-            <span class="tag">Risk Modelling</span>
+            <span class="tag">Python</span><span class="tag">SQL</span>
+            <span class="tag">Survival Analysis</span><span class="tag">Pandas</span>
+            <span class="tag">NumPy</span><span class="tag">Risk Modelling</span>
           </div>
           <div class="project-links">
             <a href="#" class="btn btn-outline btn-sm">📄 View Report</a>
-            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-ghost btn-sm" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project-card">
+      <div class="project-card reveal delay-200">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Public Policy &bull; Forecasting &bull; R &bull; Python</div>
+          <div class="project-number">Project 02</div>
+          <div class="project-type">
+            <span class="project-type-tag">Public Policy</span>
+            <span class="project-type-tag">Forecasting</span>
+            <span class="project-type-tag">R</span>
+          </div>
           <h3 class="project-title">Education Funding Forecast &amp; Policy Scenario Analysis — Alberta</h3>
           <p class="project-desc">
             Developed statistical models, scenario analyses, and sensitivity analyses to forecast
@@ -78,25 +87,26 @@
             across Canadian and international jurisdictions.
           </p>
           <div class="project-tags">
-            <span class="tag">R</span>
-            <span class="tag">Python</span>
-            <span class="tag">Forecasting</span>
-            <span class="tag">Scenario Analysis</span>
-            <span class="tag">Policy Research</span>
-            <span class="tag">Power BI</span>
+            <span class="tag">R</span><span class="tag">Python</span>
+            <span class="tag">Forecasting</span><span class="tag">Scenario Analysis</span>
+            <span class="tag">Policy Research</span><span class="tag">Power BI</span>
           </div>
           <div class="project-links">
             <a href="#" class="btn btn-outline btn-sm">📄 View Brief</a>
-            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-ghost btn-sm" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="project-card">
+      <div class="project-card reveal delay-300">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Econometrics &bull; R &bull; Master's Research</div>
+          <div class="project-number">Project 03</div>
+          <div class="project-type">
+            <span class="project-type-tag">Econometrics</span>
+            <span class="project-type-tag">Master's Thesis</span>
+            <span class="project-type-tag">R</span>
+          </div>
           <h3 class="project-title">Economic Determinants of Food Security in the Northwest Territories</h3>
           <p class="project-desc">
             Master's thesis investigating the economic factors driving food security outcomes in
@@ -105,25 +115,26 @@
             policy recommendations for remote and Indigenous communities.
           </p>
           <div class="project-tags">
-            <span class="tag">R</span>
-            <span class="tag">Econometrics</span>
-            <span class="tag">Panel Data</span>
-            <span class="tag">Policy Analysis</span>
-            <span class="tag">ggplot2</span>
-            <span class="tag">Statistics Canada</span>
+            <span class="tag">R</span><span class="tag">Econometrics</span>
+            <span class="tag">Panel Data</span><span class="tag">Policy Analysis</span>
+            <span class="tag">ggplot2</span><span class="tag">Statistics Canada</span>
           </div>
           <div class="project-links">
             <a href="#" class="btn btn-outline btn-sm">📄 Read Thesis</a>
-            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-ghost btn-sm" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 4 -->
-      <div class="project-card">
+      <div class="project-card reveal delay-100">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Simulation &bull; R &bull; Statistical Inference</div>
+          <div class="project-number">Project 04</div>
+          <div class="project-type">
+            <span class="project-type-tag">Simulation</span>
+            <span class="project-type-tag">Statistical Inference</span>
+            <span class="project-type-tag">R</span>
+          </div>
           <h3 class="project-title">Bootstrap &amp; Monte Carlo Inference — Exchange Rate &amp; Commodity Prices</h3>
           <p class="project-desc">
             Applied simulation-based inference using bootstrap and Monte Carlo techniques to analyze
@@ -131,24 +142,26 @@
             properties of estimators and constructed confidence intervals under non-standard distributions.
           </p>
           <div class="project-tags">
-            <span class="tag">R</span>
-            <span class="tag">Bootstrap</span>
-            <span class="tag">Monte Carlo</span>
-            <span class="tag">Time Series</span>
+            <span class="tag">R</span><span class="tag">Bootstrap</span>
+            <span class="tag">Monte Carlo</span><span class="tag">Time Series</span>
             <span class="tag">Statistical Inference</span>
           </div>
           <div class="project-links">
             <a href="#" class="btn btn-outline btn-sm">📈 View Analysis</a>
-            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-ghost btn-sm" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 5 -->
-      <div class="project-card">
+      <div class="project-card reveal delay-200">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">International Trade &bull; R &bull; Panel Data</div>
+          <div class="project-number">Project 05</div>
+          <div class="project-type">
+            <span class="project-type-tag">International Trade</span>
+            <span class="project-type-tag">Panel Data</span>
+            <span class="project-type-tag">R</span>
+          </div>
           <h3 class="project-title">Gravity Models of Trade — EU Panel Data</h3>
           <p class="project-desc">
             Estimated gravity models of bilateral trade for European Union member states using
@@ -157,24 +170,26 @@
             pattern shifts.
           </p>
           <div class="project-tags">
-            <span class="tag">R</span>
-            <span class="tag">Gravity Model</span>
-            <span class="tag">Panel Data</span>
-            <span class="tag">International Trade</span>
+            <span class="tag">R</span><span class="tag">Gravity Model</span>
+            <span class="tag">Panel Data</span><span class="tag">International Trade</span>
             <span class="tag">Econometrics</span>
           </div>
           <div class="project-links">
             <a href="#" class="btn btn-outline btn-sm">📄 View Paper</a>
-            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-ghost btn-sm" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 6 -->
-      <div class="project-card">
+      <div class="project-card reveal delay-300">
         <div class="project-banner"></div>
         <div class="project-body">
-          <div class="project-type">Market Analysis &bull; Python &bull; Forecasting</div>
+          <div class="project-number">Project 06</div>
+          <div class="project-type">
+            <span class="project-type-tag">Market Analysis</span>
+            <span class="project-type-tag">Forecasting</span>
+            <span class="project-type-tag">Python</span>
+          </div>
           <h3 class="project-title">Alberta iGaming &amp; Liquor Markup Trend Forecasting</h3>
           <p class="project-desc">
             Conducted quantitative forecasting and analysis of iGaming revenue and liquor markup
@@ -183,16 +198,13 @@
             policy decisions at the provincial level.
           </p>
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Forecasting</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Power BI</span>
-            <span class="tag">Market Analysis</span>
-            <span class="tag">Dashboard</span>
+            <span class="tag">Python</span><span class="tag">Forecasting</span>
+            <span class="tag">SQL</span><span class="tag">Power BI</span>
+            <span class="tag">Market Analysis</span><span class="tag">Dashboard</span>
           </div>
           <div class="project-links">
             <a href="#" class="btn btn-outline btn-sm">📊 View Dashboard</a>
-            <a href="https://github.com/Oscartetteh" class="btn btn-sm" style="border:1px solid var(--border);color:var(--text-dim);" target="_blank">🐙 GitHub</a>
+            <a href="https://github.com/Oscartetteh" class="btn btn-ghost btn-sm" target="_blank">🐙 GitHub</a>
           </div>
         </div>
       </div>
@@ -203,17 +215,24 @@
 
 <footer>
   <div class="footer-socials">
-    <a href="https://www.linkedin.com/in/oscar-bismark-tetteh-93a1351a7" class="social-link" target="_blank" title="LinkedIn">in</a>
-    <a href="https://github.com/Oscartetteh" class="social-link" target="_blank" title="GitHub">⌥</a>
-    <a href="mailto:oscar.tetteh@ct.gov" class="social-link" title="Email">@</a>
+    <a href="https://www.linkedin.com/in/oscar-bismark-tetteh-93a1351a7" class="social-link" target="_blank">in</a>
+    <a href="https://github.com/Oscartetteh" class="social-link" target="_blank">gh</a>
+    <a href="mailto:oscar.tetteh@ct.gov" class="social-link">@</a>
   </div>
   <p>Designed &amp; built by <span>Oscar Bismark Tetteh</span> &mdash; &copy; 2026</p>
 </footer>
 
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.getElementById('hamburger').addEventListener('click', () =>
+    document.getElementById('navLinks').classList.toggle('open'));
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  window.addEventListener('scroll', () =>
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60));
 </script>
 </body>
 </html>

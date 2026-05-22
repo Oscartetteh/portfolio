@@ -8,6 +8,13 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
 </head>
 <body>
+<!-- ── Aurora Background ── -->
+<div class="aurora">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
 
 <!-- ── Navigation ── -->
 <nav id="navbar">
@@ -27,13 +34,20 @@
 
 <!-- ── Hero ── -->
 <section class="hero" id="home">
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-bg-glow"></div>
   <div class="hero-content">
-    <span class="hero-tag fade-in">Welcome to my portfolio</span>
-    <h1 class="fade-in delay-1">Hi, I'm <span>Oscar Bismark Tetteh</span></h1>
-    <p class="hero-subtitle fade-in delay-2">Data Scientist &amp; Quantitative Economist</p>
+    <div class="hero-tag fade-in">Available for opportunities</div>
+    <h1 class="fade-in delay-1">Oscar Bismark<br><span class="gradient-text">Tetteh</span></h1>
+    <div class="hero-typewriter fade-in delay-2">
+      <span>I am a&nbsp;</span>
+      <span class="typewriter-text" id="typewriter"></span>
+      <span class="cursor">|</span>
+    </div>
     <p class="hero-desc fade-in delay-3">
       Turning complex data into clear, decision-ready insights through rigorous statistical analysis,
-      forecasting, and evidence-based research — with over six years of experience across the public, private, and academic sectors.
+      forecasting, and evidence-based research — with over six years of experience across the public,
+      private, and academic sectors.
     </p>
     <div class="hero-btns fade-in delay-4">
       <a href="{{ url_for('projects') }}" class="btn btn-primary">View My Work</a>
@@ -47,19 +61,26 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Get to know me</span>
-      <h2 class="section-title">About Me</h2>
-      <div class="section-line"></div>
+      <h2 class="section-title">About <span>Me</span></h2>
+      <p class="section-subtitle">Data scientist, statistician, and quantitative economist passionate about evidence-based analysis.</p>
     </div>
 
     <div class="about-grid">
-      <div class="about-img-wrap">
-        <img src="{{ url_for('static', filename='images/IMG_9525_1.jpg') }}"
-             alt="Oscar Bismark Tetteh"
-             style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+      <div class="about-img-wrap reveal-left">
+        <div class="profile-orbit"></div>
+        <div class="profile-glow-ring">
+          <div class="profile-photo-inner">
+            <img src="{{ url_for('static', filename='images/IMG_9525_1.jpg') }}" alt="Oscar Bismark Tetteh" />
+          </div>
+        </div>
+        <div class="about-badge">
+          <span class="about-badge-num">6+</span>
+          <span class="about-badge-label">Years</span>
+        </div>
       </div>
 
-      <div class="about-text">
-        <h3>Data Scientist, Statistician &amp; Quantitative Economist</h3>
+      <div class="about-text reveal-right">
+        <h3>Data Scientist, Statistician &amp;<br>Quantitative Economist</h3>
         <p>
           I am a data scientist, statistician, and quantitative economist with over six years of experience
           across academia, the private sector, and the public sector. I specialize in forecasting, statistical
@@ -76,16 +97,16 @@
         </p>
 
         <div class="about-stats">
-          <div class="stat-box">
-            <span class="stat-num">6+</span>
+          <div class="stat-box reveal delay-100">
+            <span class="stat-num" data-target="6">0</span>
             <span class="stat-label">Years Experience</span>
           </div>
-          <div class="stat-box">
-            <span class="stat-num">7+</span>
+          <div class="stat-box reveal delay-200">
+            <span class="stat-num" data-target="7">0</span>
             <span class="stat-label">Roles &amp; Sectors</span>
           </div>
-          <div class="stat-box">
-            <span class="stat-num">15+</span>
+          <div class="stat-box reveal delay-300">
+            <span class="stat-num" data-target="15">0</span>
             <span class="stat-label">Tools Mastered</span>
           </div>
         </div>
@@ -104,85 +125,72 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">What I work with</span>
-      <h2 class="section-title">Skills &amp; Tools</h2>
-      <div class="section-line"></div>
+      <h2 class="section-title">Skills &amp; <span>Tools</span></h2>
+      <p class="section-subtitle">A versatile toolkit built across years of applied research and data work.</p>
     </div>
 
     <div class="skills-grid">
 
-      <div class="skill-category">
-        <div class="skill-cat-title">📊 Data Analysis &amp; Programming</div>
+      <div class="skill-category reveal delay-100">
+        <div class="skill-cat-icon">📊</div>
+        <div class="skill-cat-title">Data Analysis &amp; Programming</div>
         <div class="skill-tags">
-          <span class="tag">Python</span>
-          <span class="tag">R</span>
-          <span class="tag">Pandas</span>
-          <span class="tag">NumPy</span>
-          <span class="tag">SciPy</span>
-          <span class="tag">Statsmodels</span>
-          <span class="tag">Excel</span>
+          <span class="tag">Python</span><span class="tag">R</span>
+          <span class="tag">Pandas</span><span class="tag">NumPy</span>
+          <span class="tag">SciPy</span><span class="tag">Statsmodels</span><span class="tag">Excel</span>
         </div>
       </div>
 
-      <div class="skill-category">
-        <div class="skill-cat-title">📈 Data Visualization &amp; Reporting</div>
+      <div class="skill-category reveal delay-200">
+        <div class="skill-cat-icon">📈</div>
+        <div class="skill-cat-title">Data Visualization &amp; Reporting</div>
         <div class="skill-tags">
-          <span class="tag">Power BI</span>
-          <span class="tag">Matplotlib</span>
-          <span class="tag">Seaborn</span>
-          <span class="tag">Plotly</span>
-          <span class="tag">Excel</span>
-          <span class="tag">Visio</span>
+          <span class="tag">Power BI</span><span class="tag">Matplotlib</span>
+          <span class="tag">Seaborn</span><span class="tag">Plotly</span>
+          <span class="tag">Excel</span><span class="tag">Visio</span>
         </div>
       </div>
 
-      <div class="skill-category">
-        <div class="skill-cat-title">🗄️ Databases &amp; Pipelines</div>
+      <div class="skill-category reveal delay-300">
+        <div class="skill-cat-icon">🗄️</div>
+        <div class="skill-cat-title">Databases &amp; Pipelines</div>
         <div class="skill-tags">
-          <span class="tag">SQL</span>
-          <span class="tag">ETL Pipelines</span>
-          <span class="tag">ELT Pipelines</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">BigQuery</span>
+          <span class="tag">SQL</span><span class="tag">ETL Pipelines</span>
+          <span class="tag">ELT Pipelines</span><span class="tag">PostgreSQL</span>
+          <span class="tag">SQLite</span><span class="tag">BigQuery</span>
         </div>
       </div>
 
-      <div class="skill-category">
-        <div class="skill-cat-title">🔬 Statistical &amp; Econometric Methods</div>
+      <div class="skill-category reveal delay-100">
+        <div class="skill-cat-icon">🔬</div>
+        <div class="skill-cat-title">Statistical &amp; Econometric Methods</div>
         <div class="skill-tags">
-          <span class="tag">Forecasting</span>
-          <span class="tag">Econometrics</span>
-          <span class="tag">Regression Analysis</span>
-          <span class="tag">Time Series</span>
-          <span class="tag">Survival Analysis</span>
-          <span class="tag">Bootstrap &amp; Monte Carlo</span>
+          <span class="tag">Forecasting</span><span class="tag">Econometrics</span>
+          <span class="tag">Regression Analysis</span><span class="tag">Time Series</span>
+          <span class="tag">Survival Analysis</span><span class="tag">Bootstrap &amp; Monte Carlo</span>
           <span class="tag">Hypothesis Testing</span>
         </div>
       </div>
 
-      <div class="skill-category">
-        <div class="skill-cat-title">🗺️ Spatial &amp; Policy Analysis</div>
+      <div class="skill-category reveal delay-200">
+        <div class="skill-cat-icon">🗺️</div>
+        <div class="skill-cat-title">Spatial &amp; Policy Analysis</div>
         <div class="skill-tags">
-          <span class="tag">QGIS</span>
-          <span class="tag">Spatial Analysis (R)</span>
+          <span class="tag">QGIS</span><span class="tag">Spatial Analysis (R)</span>
           <span class="tag">Policy Impact Assessment</span>
           <span class="tag">Regulatory Analysis</span>
-          <span class="tag">Jurisdictional Scans</span>
-          <span class="tag">Survey Design</span>
+          <span class="tag">Jurisdictional Scans</span><span class="tag">Survey Design</span>
         </div>
       </div>
 
-      <div class="skill-category">
-        <div class="skill-cat-title">☁️ Tools &amp; Environment</div>
+      <div class="skill-category reveal delay-300">
+        <div class="skill-cat-icon">☁️</div>
+        <div class="skill-cat-title">Tools &amp; Environment</div>
         <div class="skill-tags">
-          <span class="tag">Git</span>
-          <span class="tag">GitHub</span>
-          <span class="tag">Jupyter</span>
-          <span class="tag">VS Code</span>
-          <span class="tag">pyenv</span>
-          <span class="tag">venv</span>
-          <span class="tag">conda</span>
-          <span class="tag">SPSS</span>
+          <span class="tag">Git</span><span class="tag">GitHub</span>
+          <span class="tag">Jupyter</span><span class="tag">VS Code</span>
+          <span class="tag">pyenv</span><span class="tag">venv</span>
+          <span class="tag">conda</span><span class="tag">SPSS</span>
         </div>
       </div>
 
@@ -195,83 +203,86 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Let's connect</span>
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="section-line"></div>
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="section-subtitle">Open to opportunities, collaborations, and research conversations.</p>
     </div>
 
     <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Open to opportunities &amp; collaborations</h3>
+      <div class="reveal-left">
+        <h3>Let's work together</h3>
         <p>
           Whether you have a research question, a data project, or want to discuss policy analytics,
           feel free to reach out. I'll get back to you as soon as I can.
         </p>
 
-        <div class="contact-item">
-          <div class="contact-icon">📧</div>
-          <div class="contact-detail">
-            <span>Work Email</span>
-            <a href="mailto:oscar.tetteh@ct.gov">oscar.tetteh@ct.gov</a>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <span>Work Email</span>
+              <a href="mailto:oscar.tetteh@ct.gov">oscar.tetteh@ct.gov</a>
+            </div>
           </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📱</div>
-          <div class="contact-detail">
-            <span>Phone</span>
-            +1 (959) 256 6411
+          <div class="contact-card">
+            <div class="contact-icon">📱</div>
+            <div class="contact-detail">
+              <span>Phone</span>
+              +1 (959) 256 6411
+            </div>
           </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div class="contact-detail">
-            <span>Location</span>
-            Hartford, Connecticut, USA
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <span>Location</span>
+              Hartford, Connecticut, USA
+            </div>
           </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div class="contact-detail">
-            <span>LinkedIn</span>
-            <a href="https://www.linkedin.com/in/oscar-bismark-tetteh-93a1351a7" target="_blank">linkedin.com/in/oscar-bismark-tetteh</a>
+          <div class="contact-card">
+            <div class="contact-icon">💼</div>
+            <div class="contact-detail">
+              <span>LinkedIn</span>
+              <a href="https://www.linkedin.com/in/oscar-bismark-tetteh-93a1351a7" target="_blank">oscar-bismark-tetteh</a>
+            </div>
           </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">🐙</div>
-          <div class="contact-detail">
-            <span>GitHub</span>
-            <a href="https://github.com/Oscartetteh" target="_blank">github.com/Oscartetteh</a>
+          <div class="contact-card">
+            <div class="contact-icon">🐙</div>
+            <div class="contact-detail">
+              <span>GitHub</span>
+              <a href="https://github.com/Oscartetteh" target="_blank">Oscartetteh</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Jane Smith" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="jane@example.com" required />
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" placeholder="Project Inquiry" />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
-          Send Message ✉️
-        </button>
-        <p id="form-feedback" style="text-align:center;color:var(--accent);display:none;margin-top:.5rem;font-size:.9rem;">
-          ✅ Thanks! I'll be in touch soon.
-        </p>
-      </form>
+      <div class="contact-form-wrap reveal-right">
+        <h4>Send a Message</h4>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Project Inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Send Message ✉️
+          </button>
+          <p id="form-feedback" style="text-align:center;color:var(--accent);display:none;margin-top:.75rem;font-size:.9rem;">
+            ✅ Thanks! I'll be in touch soon.
+          </p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -280,21 +291,113 @@
 <footer>
   <div class="footer-socials">
     <a href="https://www.linkedin.com/in/oscar-bismark-tetteh-93a1351a7" class="social-link" target="_blank" title="LinkedIn">in</a>
-    <a href="https://github.com/Oscartetteh" class="social-link" target="_blank" title="GitHub">⌥</a>
+    <a href="https://github.com/Oscartetteh" class="social-link" target="_blank" title="GitHub">gh</a>
     <a href="mailto:oscar.tetteh@ct.gov" class="social-link" title="Email">@</a>
   </div>
   <p>Designed &amp; built by <span>Oscar Bismark Tetteh</span> &mdash; &copy; 2026</p>
 </footer>
 
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  /* ── Particles ── */
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
 
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', () => { resize(); initParticles(); });
+
+  function initParticles() {
+    particles = [];
+    const count = Math.floor((canvas.width * canvas.height) / 18000);
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.5 + .3,
+        dx: (Math.random() - .5) * .3,
+        dy: (Math.random() - .5) * .3,
+        alpha: Math.random() * .5 + .1
+      });
+    }
+  }
+  initParticles();
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(96,165,250,${p.alpha})`;
+      ctx.fill();
+      p.x += p.dx; p.y += p.dy;
+      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    });
+
+    // Draw connecting lines
+    particles.forEach((a, i) => {
+      particles.slice(i + 1).forEach(b => {
+        const dist = Math.hypot(a.x - b.x, a.y - b.y);
+        if (dist < 120) {
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(96,165,250,${.08 * (1 - dist / 120)})`;
+          ctx.lineWidth = .5;
+          ctx.stroke();
+        }
+      });
+    });
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+
+  /* ── Typewriter ── */
+  const roles = ['Data Scientist', 'Quantitative Economist', 'Statistician', 'Policy Analyst', 'Research Analyst'];
+  let ri = 0, ci = 0, deleting = false;
+  const el = document.getElementById('typewriter');
+
+  function type() {
+    const word = roles[ri];
+    el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+    let delay = deleting ? 60 : 100;
+    if (!deleting && ci > word.length) { delay = 1800; deleting = true; }
+    else if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; delay = 300; }
+    setTimeout(type, delay);
+  }
+  setTimeout(type, 1200);
+
+  /* ── Animated Counters ── */
+  function animateCounter(el) {
+    const target = +el.dataset.target;
+    let count = 0;
+    const step = Math.ceil(target / 40);
+    const timer = setInterval(() => {
+      count = Math.min(count + step, target);
+      el.textContent = count + '+';
+      if (count >= target) clearInterval(timer);
+    }, 40);
+  }
+
+  /* ── Scroll Reveal ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        // Trigger counter if stat
+        const counter = e.target.querySelector('[data-target]');
+        if (counter) animateCounter(counter);
+        if (e.target.dataset.target) animateCounter(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  /* ── Active Nav on Scroll ── */
   const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a');
-  const observer = new IntersectionObserver(entries => {
+  const sectionObserver = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         navAnchors.forEach(a => a.classList.remove('active'));
@@ -302,14 +405,20 @@
         if (link) link.classList.add('active');
       }
     });
-  }, { threshold: 0.45 });
-  sections.forEach(s => observer.observe(s));
+  }, { threshold: 0.4 });
+  sections.forEach(s => sectionObserver.observe(s));
 
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').style.background =
-      window.scrollY > 60 ? 'rgba(10,15,30,.97)' : 'rgba(10,15,30,.9)';
-  });
+  /* ── Navbar Scroll ── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
 
+  /* ── Hamburger ── */
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  /* ── Contact Form ── */
   function handleSubmit(e) {
     e.preventDefault();
     document.getElementById('form-feedback').style.display = 'block';
