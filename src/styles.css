@@ -729,6 +729,7 @@ section { padding: 100px 2rem; }
 .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-dim); opacity: .45; }
 .full-button { width: 100%; justify-content: center; }
 .form-feedback { text-align: center; color: var(--accent); margin-top: .75rem; font-size: .9rem; }
+.form-error { text-align: center; color: #fca5a5; margin-top: .75rem; font-size: .9rem; }
 
 /* ── Footer ───────────────────────────────────────── */
 footer {

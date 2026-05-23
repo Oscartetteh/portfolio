@@ -588,23 +588,28 @@ function SkillsSection() {
 
 function ContactSection() {
   const [sent, setSent] = useState(false);
-  const sendEmail = (event) => {
+  const [error, setError] = useState('');
+  const submitToFormspree = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const subject = form.subject.value.trim() || 'Portfolio inquiry';
-    const message = form.message.value.trim();
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      '',
-      message
-    ].join('\n');
+    setSent(false);
+    setError('');
 
-    window.location.href = `mailto:bismarktetteh25@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
-    form.reset();
+    try {
+      const response = await fetch('https://formspree.io/f/mnjrzdqz', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (!response.ok) throw new Error('Form submission failed');
+      setSent(true);
+      form.reset();
+    } catch {
+      setError('Message could not be sent. Please email me directly at bismarktetteh25@gmail.com.');
+    }
   };
 
   return (
@@ -629,15 +634,16 @@ function ContactSection() {
           </div>
           <div className="contact-form-wrap reveal-right">
             <h4>Send a Message</h4>
-            <form className="contact-form" onSubmit={sendEmail}>
+            <form className="contact-form" onSubmit={submitToFormspree}>
               <div className="form-row">
-                <div className="form-group"><label htmlFor="name">Full Name</label><input type="text" id="name" placeholder="Jane Smith" required /></div>
-                <div className="form-group"><label htmlFor="email">Email Address</label><input type="email" id="email" placeholder="jane@example.com" required /></div>
+                <div className="form-group"><label htmlFor="name">Full Name</label><input type="text" id="name" name="name" placeholder="Jane Smith" required /></div>
+                <div className="form-group"><label htmlFor="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@example.com" required /></div>
               </div>
-              <div className="form-group"><label htmlFor="subject">Subject</label><input type="text" id="subject" placeholder="Project Inquiry" /></div>
-              <div className="form-group"><label htmlFor="message">Message</label><textarea id="message" rows="5" placeholder="Tell me about your project or question..." required></textarea></div>
+              <div className="form-group"><label htmlFor="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Project Inquiry" /></div>
+              <div className="form-group"><label htmlFor="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question..." required></textarea></div>
               <button type="submit" className="btn btn-primary full-button">Send Message ✉️</button>
               {sent && <p className="form-feedback">Thanks! I'll be in touch soon.</p>}
+              {error && <p className="form-error">{error}</p>}
             </form>
           </div>
         </div>
