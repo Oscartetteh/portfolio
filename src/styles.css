@@ -728,8 +728,10 @@ section { padding: 100px 2rem; }
 }
 .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-dim); opacity: .45; }
 .full-button { width: 100%; justify-content: center; }
+.full-button:disabled { opacity: .72; cursor: wait; transform: none; }
 .form-feedback { text-align: center; color: var(--accent); margin-top: .75rem; font-size: .9rem; }
 .form-error { text-align: center; color: #fca5a5; margin-top: .75rem; font-size: .9rem; }
+.field-error { color: #fca5a5; font-size: .78rem; line-height: 1.4; }
 
 /* ── Footer ───────────────────────────────────────── */
 footer {

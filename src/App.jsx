@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const resumePdf = '/files/2026-05-22-Resume_Oscar_Tetteh.pdf';
 const profileImage = '/images/Oscar Tetteh_Photo.png';
@@ -587,30 +588,7 @@ function SkillsSection() {
 }
 
 function ContactSection() {
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState('');
-  const submitToFormspree = async (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    setSent(false);
-    setError('');
-
-    try {
-      const response = await fetch('https://formspree.io/f/mnjrzdqz', {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-          Accept: 'application/json'
-        }
-      });
-
-      if (!response.ok) throw new Error('Form submission failed');
-      setSent(true);
-      form.reset();
-    } catch {
-      setError('Message could not be sent. Please email me directly at bismarktetteh25@gmail.com.');
-    }
-  };
+  const [state, handleSubmit] = useForm('mnjrzdqz');
 
   return (
     <section id="contact">
@@ -634,16 +612,34 @@ function ContactSection() {
           </div>
           <div className="contact-form-wrap reveal-right">
             <h4>Send a Message</h4>
-            <form className="contact-form" onSubmit={submitToFormspree}>
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
-                <div className="form-group"><label htmlFor="name">Full Name</label><input type="text" id="name" name="name" placeholder="Jane Smith" required /></div>
-                <div className="form-group"><label htmlFor="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@example.com" required /></div>
+                <div className="form-group">
+                  <label htmlFor="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+                  <ValidationError className="field-error" field="name" errors={state.errors} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+                  <ValidationError className="field-error" field="email" errors={state.errors} />
+                </div>
               </div>
-              <div className="form-group"><label htmlFor="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Project Inquiry" /></div>
-              <div className="form-group"><label htmlFor="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question..." required></textarea></div>
-              <button type="submit" className="btn btn-primary full-button">Send Message ✉️</button>
-              {sent && <p className="form-feedback">Thanks! I'll be in touch soon.</p>}
-              {error && <p className="form-error">{error}</p>}
+              <div className="form-group">
+                <label htmlFor="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project Inquiry" />
+                <ValidationError className="field-error" field="subject" errors={state.errors} />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
+                <ValidationError className="field-error" field="message" errors={state.errors} />
+              </div>
+              <button type="submit" className="btn btn-primary full-button" disabled={state.submitting}>
+                {state.submitting ? 'Sending...' : 'Send Message ✉️'}
+              </button>
+              {state.succeeded && <p className="form-feedback">Thanks! I'll be in touch soon.</p>}
+              <ValidationError className="form-error" errors={state.errors} />
             </form>
           </div>
         </div>
