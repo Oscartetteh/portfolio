@@ -588,6 +588,25 @@ function SkillsSection() {
 
 function ContactSection() {
   const [sent, setSent] = useState(false);
+  const sendEmail = (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim() || 'Portfolio inquiry';
+    const message = form.message.value.trim();
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      '',
+      message
+    ].join('\n');
+
+    window.location.href = `mailto:bismarktetteh25@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSent(true);
+    form.reset();
+  };
+
   return (
     <section id="contact">
       <div className="container">
@@ -610,7 +629,7 @@ function ContactSection() {
           </div>
           <div className="contact-form-wrap reveal-right">
             <h4>Send a Message</h4>
-            <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setSent(true); event.currentTarget.reset(); }}>
+            <form className="contact-form" onSubmit={sendEmail}>
               <div className="form-row">
                 <div className="form-group"><label htmlFor="name">Full Name</label><input type="text" id="name" placeholder="Jane Smith" required /></div>
                 <div className="form-group"><label htmlFor="email">Email Address</label><input type="email" id="email" placeholder="jane@example.com" required /></div>
