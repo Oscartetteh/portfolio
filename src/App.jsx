@@ -588,6 +588,24 @@ function SkillsSection() {
 
 function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const openGmailCompose = (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim() || 'Portfolio inquiry';
+    const message = form.message.value.trim();
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      '',
+      message
+    ].join('\n');
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=bismarktetteh25@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    setSubmitted(true);
+  };
 
   return (
     <section id="contact">
@@ -613,9 +631,7 @@ function ContactSection() {
             <h4>Send a Message</h4>
             <form
               className="contact-form"
-              action="https://formspree.io/f/mnjrzdqz"
-              method="POST"
-              onSubmit={() => setSubmitted(true)}
+              onSubmit={openGmailCompose}
             >
               <div className="form-row">
                 <div className="form-group">
@@ -635,9 +651,8 @@ function ContactSection() {
                 <label htmlFor="message">Message</label>
                 <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
               </div>
-              <input type="hidden" name="_subject" value="New portfolio contact message" />
               <button type="submit" className="btn btn-primary full-button">Send Message ✉️</button>
-              {submitted && <p className="form-feedback">Opening secure Formspree submission...</p>}
+              {submitted && <p className="form-feedback">Gmail compose opened in a new tab. Please click Send there.</p>}
             </form>
           </div>
         </div>
