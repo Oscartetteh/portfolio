@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 const resumePdf = '/files/2026-05-22-Resume_Oscar_Tetteh.pdf';
 const profileImage = '/images/IMG_9525_1.jpg';
+const externalProfile = 'https://smart-training.ca/blog/2023/06/27/oscar-bismark-tetteh/';
 
 function LinkedInIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.9H3.78v10.05h3.16V8.9ZM5.36 5.05c-1.02 0-1.69.67-1.69 1.54 0 .86.65 1.54 1.65 1.54h.02c1.04 0 1.68-.68 1.68-1.54-.02-.87-.64-1.54-1.66-1.54Zm5.32 13.9h3.16v-5.62c0-.3.02-.6.11-.82.24-.6.8-1.22 1.73-1.22 1.22 0 1.71.92 1.71 2.28v5.38h3.16v-5.75c0-3.08-1.65-4.51-3.85-4.51-1.8 0-2.58 1-3.02 1.68h.02V8.9h-3.02c.04.94 0 10.05 0 10.05Z" /></svg>;
@@ -604,6 +605,7 @@ function ContactSection() {
               <ContactCard icon="📍" label="Location">Hartford, Connecticut, USA</ContactCard>
               <ContactCard icon="💼" label="LinkedIn"><a href="https://www.linkedin.com/in/oscar-bismark-tetteh-93a1351a7" target="_blank" rel="noreferrer">oscar-bismark-tetteh</a></ContactCard>
               <ContactCard icon="⌘" label="GitHub"><a href="https://github.com/Oscartetteh" target="_blank" rel="noreferrer">Oscartetteh</a></ContactCard>
+              <ContactCard icon="↗" label="Profile"><a href={externalProfile} target="_blank" rel="noreferrer">SMART Training feature</a></ContactCard>
             </div>
           </div>
           <div className="contact-form-wrap reveal-right">
@@ -661,6 +663,7 @@ function ProjectsPage() {
                 <div className="project-tags">{tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div>
                 <div className="project-links">
                   <a href={pdf || '#'} className="btn btn-outline btn-sm" target={pdf ? '_blank' : undefined} rel={pdf ? 'noreferrer' : undefined}>📄 {cta}</a>
+                  <a href={externalProfile} className="btn btn-ghost btn-sm" target="_blank" rel="noreferrer">Profile</a>
                   <a href="https://github.com/Oscartetteh" className="btn btn-ghost btn-sm" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
               </div>
