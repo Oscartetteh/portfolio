@@ -501,7 +501,7 @@ function HomePage() {
             <p className="hero-desc fade-in delay-3">Turning complex data into clear, decision-ready insights through rigorous statistical analysis, forecasting, and evidence-based research &mdash; with over six years of experience across the public, private, and academic sectors.</p>
             <div className="hero-btns fade-in delay-4">
               <a href="/projects" className="btn btn-primary" onClick={(event) => { event.preventDefault(); navigate('projects'); }}>View My Work</a>
-              <a href={resumePdf} className="btn btn-outline" download>⬇ Download Resume</a>
+              <a href={resumePdf} className="btn btn-outline" download="Oscar_Tetteh_Resume.pdf">⬇ Download Resume</a>
             </div>
           </div>
           <div className="globe-wrap fade-in delay-3" aria-hidden="true">
@@ -715,7 +715,7 @@ function ResumePage() {
       <div className="container">
         <div className="resume-header-bar reveal">
           <div><span className="section-tag">Curriculum Vitae</span><h1 className="section-title resume-title">Oscar Bismark <span>Tetteh</span></h1><p className="resume-meta">Data Scientist &amp; Quantitative Economist &nbsp;·&nbsp; Hartford, CT &nbsp;·&nbsp; +1 (959) 256 6411</p></div>
-          <a href={resumePdf} className="btn btn-primary" download>⬇ Download PDF</a>
+          <a href={resumePdf} className="btn btn-primary" download="Oscar_Tetteh_Resume.pdf">⬇ Download PDF</a>
         </div>
         <div className="resume-block reveal"><div className="resume-section-title">Professional Summary</div><p className="resume-summary">Data scientist, statistician, and quantitative economist with over six years of experience across academia, the private sector, and the public sector. Specializes in forecasting, statistical analysis, data modelling, and applied research, with strong experience using Python, R, SQL, and data pipelines to turn complex data into clear, decision-ready insights. Work is grounded in analytical rigour, attention to detail, and a practical approach to solving problems through evidence-based analysis.</p></div>
         <div className="resume-block reveal"><div className="resume-section-title">Work Experience</div><Timeline items={experience} /></div>
