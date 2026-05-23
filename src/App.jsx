@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 
 const resumePdf = '/files/2026-05-22-Resume_Oscar_Tetteh.pdf';
-const profileImage = '/images/IMG_9525_1.jpg';
+const profileImage = '/images/Oscar Tetteh_Photo.png';
 const externalProfile = 'https://smart-training.ca/blog/2023/06/27/oscar-bismark-tetteh/';
 
 function LinkedInIcon() {
